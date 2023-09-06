@@ -1,0 +1,27 @@
+cookie:
+  expiry_days: 30
+  key: some_signature_key
+  name: some_cookie_name
+credentials:
+  usernames:
+    jsmith:
+      email: jsmith@gmail.com
+      name: John Smith
+      password: $2b$12$wCfCTErVJfwfdsOAkegqH.k9OgqPlNjP8t7p/aVpjD2AqKev3iZD.
+    kylem:
+      email: kylemirichmusic@gmail.com
+      name: Kyle Mirich
+      password: $2b$12$GdZItKsud36FJub1d1LyJeJXBc3q3rkSukMyVSO.yaQfI0Gsr2iLG
+    rbriggs:
+      email: rbriggs@gmail.com
+      name: Rebecca Briggs
+      password: $2b$12$8sfr3zA..TP2kUNnJT6Yje7N0v6yNj9u6gN21f1LNPfOPBO34gO/O
+preauthorized:
+  emails:
+  - melsby@gmail.com
+smtp:
+  password: your_app_password
+  port: 587
+  server: smtp.gmail.com
+  use_tls: true
+  username: your_email_address
