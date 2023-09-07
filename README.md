@@ -57,10 +57,11 @@ c. Update `config.yaml`:
 
 5. **Run the Streamlit App**:
 
+   `
+   streamlit run login.py
+   `
 
- `
- streamlit run login.py
- `
+
 
 
 ## Configuration File
