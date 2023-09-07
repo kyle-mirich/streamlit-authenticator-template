@@ -5,7 +5,7 @@ This Streamlit application use the 'Streamlit-Authentictor' module to create a t
 ## Acknowledgments
 
 - A special thanks to [mkhorasani](https://github.com/mkhorasani) and contributors for their amazing work on this module!
-- Check out the full github repo [here](https://github.com/mkhorasani/Streamlit-Authenticator) and go support all the contributors!
+- Check out the full repo [here](https://github.com/mkhorasani/Streamlit-Authenticator) and go support all the contributors!
 
 
 ## Prerequisites
