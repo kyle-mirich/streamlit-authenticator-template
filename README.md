@@ -57,16 +57,14 @@ c. Update `config.yaml`:
 
 5. **Run the Streamlit App**:
 
-   `
-   streamlit run login.py
-   `
+   `streamlit run login.py`
 
 
 
 
 ## Configuration File
 
--The config.yaml file contains configuration details essential for the app. It stores user credentials (hashed) and SMTP details for email notifications. It's crucial to ensure this file is kept secure, especially when working with real credentials.
+The config.yaml file contains configuration details essential for the app. It stores user credentials (hashed) and SMTP details for email notifications. It's crucial to ensure this file is kept secure, especially when working with real credentials.
 ## Features
 - **User Authentication** Securely log in with bycrpty-hased pashwords
 - **Password Reset** Allows users to reset their passwords
