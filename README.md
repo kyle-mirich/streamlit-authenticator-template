@@ -14,14 +14,14 @@ This Streamlit application provides authentication capabilities, allowing users 
 
 `
 git clone https://github.com/kyle-mirich/st-authenticator-login-template.git
-`
+` 
 
 
 2. **Navigate to Project Directory**
 
 `
 cd streamlit-authenticator-login-template
-`
+` 
 
 
 
@@ -30,7 +30,7 @@ Navigate to the project directory and run:
 
 `
 pip install -r requirements.txt
-`
+` 
 
 
 4. **Setup Gmail SMTP**:
@@ -57,7 +57,7 @@ c. Update `config.yaml`:
 
 5. **Run the Streamlit App**:
 
-   `streamlit run login.py`
+   `streamlit run login.py` 
 
 
 
