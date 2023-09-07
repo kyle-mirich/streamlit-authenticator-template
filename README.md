@@ -1,6 +1,6 @@
 # Streamlit Authentication App
 
-This Streamlit application use the 'Streamlit-Authentictor' module to create a template that provides authentication capabilities, allowing users to register, login, reset passwords, and retrieve forgotten usernames.
+This repo provides a user authentication template made with the 'Streamlit-Authenticator' module. Providing users with the ability to add detailed user authentication to any app in minutes!
 
 ## Acknowledgments
 
