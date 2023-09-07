@@ -11,8 +11,8 @@ This Streamlit application provides authentication capabilities, allowing users 
 
 1. **Clone the Repository**
 
-
-`git clone https://github.com/kyle-mirich/st-authenticator-login-template.git
+`
+git clone https://github.com/kyle-mirich/st-authenticator-login-template.git
 `
 
 2. **Navigate to Project Directory**
@@ -55,7 +55,9 @@ c. Update `config.yaml`:
 
 5. **Run the Streamlit App**:
 
-   `streamlit run login.py` 
+   `
+   streamlit run login.py
+   ` 
 
 
 
