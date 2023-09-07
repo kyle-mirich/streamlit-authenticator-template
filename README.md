@@ -1,6 +1,12 @@
 # Streamlit Authentication App
 
-This Streamlit application provides authentication capabilities, allowing users to register, login, reset passwords, and retrieve forgotten usernames.
+This Streamlit application use the 'Streamlit-Authentictor' module to create a template that provides authentication capabilities, allowing users to register, login, reset passwords, and retrieve forgotten usernames.
+
+## Acknowledgments
+
+- A special thanks to [mkhorasani](https://github.com/mkhorasani) and contributors for their amazing work on this module!
+- Check out the full github repo here [mkhorasani](https://github.com/mkhorasani/Streamlit-Authenticator) and go support all the contributors!
+
 
 ## Prerequisites
 - Python (>= 3.7)
