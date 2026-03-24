@@ -1,5 +1,6 @@
 import streamlit as st
 import streamlit_authenticator as stauth
+from streamlit_authenticator.utilities.hasher import Hasher
 import yaml
 from yaml.loader import SafeLoader
 import smtplib
@@ -52,7 +53,7 @@ def hash_plaintext_passwords(config):
             plaintext_passwords[user] = details['password']
 
     if plaintext_passwords:
-        hashed_passwords = stauth.Hasher(list(plaintext_passwords.values())).generate()
+        hashed_passwords = Hasher(list(plaintext_passwords.values())).generate()
         for user, hashed_pw in zip(plaintext_passwords.keys(), hashed_passwords):
             config['credentials']['usernames'][user]['password'] = hashed_pw
 
@@ -79,7 +80,7 @@ authenticator = stauth.Authenticate(
     config['preauthorized']
 )
 
-name, authentication_status, username = authenticator.login('Login', 'main')
+name, authentication_status, username = authenticator.login()
 
 if authentication_status:
     # If the user is authenticated
@@ -88,12 +89,12 @@ if authentication_status:
     st.title('Some content')  
 ### FUNCTIONS
     # Reset Password
-    if authenticator.reset_password(username, 'Reset password'):
+    if authenticator.reset_password(username):
         save_config(config)
         st.success('Password modified successfully')
     
     # Update User Details
-    if authenticator.update_user_details(username, 'Update user details'):
+    if authenticator.update_user_details(username):
         save_config(config)
         st.success('Entries updated successfully')
 
@@ -105,15 +106,15 @@ else:
 
     # Register User
     try:
-        if authenticator.register_user('Register user', preauthorization=False):
+        if authenticator.register_user(pre_authorization=False):
             save_config(config)
-            st.success('User registered successfully')
+            st.success('User registered successfully')  # se queda colgado
     except Exception as e:
         st.error(str(e))
 
     # Forgot Password
     try:
-        username_forgot_pw, email_forgot_password, random_password = authenticator.forgot_password('Forgot password')
+        username_forgot_pw, email_forgot_password, random_password = authenticator.forgot_password()
         if username_forgot_pw:
             user_name = config['credentials']['usernames'][username_forgot_pw]['name']  # Assuming you store the name in the config
             save_config(config)
@@ -128,7 +129,7 @@ else:
 
 # Forgot Username
 try:
-    username_forgot_username, email_forgot_username = authenticator.forgot_username('Forgot username')
+    username_forgot_username, email_forgot_username = authenticator.forgot_username()
     if username_forgot_username:
         user_name = config['credentials']['usernames'][username_forgot_username]['name']  # Retrieve the user's name from the config
         save_config(config)
